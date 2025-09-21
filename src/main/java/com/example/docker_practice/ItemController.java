@@ -15,7 +15,7 @@ public class ItemController {
     @Autowired
     private ItemRepository itemRepository;
 
-    @GetMapping("/add")
+    @PostMapping ("/add")
     public ResponseEntity<Item> create(@RequestBody Item item){
 
         Item savedItem = itemRepository.save(new Item(item.getName()));
